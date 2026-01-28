@@ -1,0 +1,167 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.header .summary-title {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 18px;
+  border: 4px solid #f3f4f6;
+  box-shadow: var(--shadow);
+}
+
+.section {
+  margin-top: 32px;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0 24px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.role {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.role:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.role h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.role .meta {
+  margin: 6px 0 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 32px;
+}
+
+.contact-card {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .header .summary-title {
+    margin-top: 16px;
+  }
+
+  .header img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 16px 48px;
+  }
+
+  .section,
+  .header {
+    padding: 22px;
+  }
+}
