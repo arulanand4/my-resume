@@ -78,6 +78,10 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.about-header {
+  align-items: start;
+}
+
 .section {
   margin-top: 32px;
   background: var(--card);
@@ -123,6 +127,38 @@ a:hover {
   font-weight: 500;
 }
 
+.about-content p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.highlight-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfdff;
+}
+
+.highlight-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .footer {
   text-align: center;
   color: var(--muted);
@@ -143,6 +179,10 @@ a:hover {
   .header {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
   }
 
   .header .summary-title {
