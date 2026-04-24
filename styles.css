@@ -71,6 +71,39 @@ a:hover {
   font-weight: 600;
 }
 
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.button-link:hover {
+  text-decoration: none;
+  background: #1d4ed8;
+}
+
+.button-link.secondary {
+  background: #eef2ff;
+  color: var(--accent);
+}
+
+.button-link.secondary:hover {
+  background: #dbeafe;
+}
+
 .profile-image {
   width: 100%;
   border-radius: 18px;
@@ -179,6 +212,10 @@ a:hover {
   .header {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .header-links {
+    justify-content: center;
   }
 
   .highlight-grid {
